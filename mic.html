@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="sidebar">
+            <h2>EMS Admin</h2>
+            <ul>
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">Add Employee</a></li>
+                <li><a href="#">Department List</a></li>
+                <li><a href="#">Payroll Details</a></li>
+                <li><a href="#">Leave Requests</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <header>
+                <h1>Employee Records</h1>
+                <p>Manage and view all registered staff members.</p>
+            </header>
+
+            <section class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Department</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#001</td>
+                            <td>Arjun Sharma</td>
+                            <td>Software Engineer</td>
+                            <td>IT Dept</td>
+                            <td><span class="status active-bg">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td>#002</td>
+                            <td>Sanya Iyer</td>
+                            <td>UI/UX Designer</td>
+                            <td>Creative</td>
+                            <td><span class="status active-bg">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td>#003</td>
+                            <td>Rohan Verma</td>
+                            <td>Project Manager</td>
+                            <td>Operations</td>
+                            <td><span class="status leave-bg">On Leave</span></td>
+                        </tr>
+                        <tr>
+                            <td>#004</td>
+                            <td>Priya Das</td>
+                            <td>Data Analyst</td>
+                            <td>Finance</td>
+                            <td><span class="status active-bg">Active</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
