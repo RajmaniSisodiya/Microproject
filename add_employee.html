@@ -4,11 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body style="background-color: plum; height: 1500px;">
 
-<nav style="background-color:rgb(155, 59, 155); position: sticky; top:0px">
+<style>
+    /* Styling for the input box */
+    .enhanced-input {
+        width: 400px;            /* Makes it stretch nicely (or use 300px for fixed width) */
+        max-width: 400px;        /* Stops it from getting too wide on large screens */
+        padding: 12px 15px;      /* Adds breathing room inside the box */
+        font-size: 16px;         /* Makes the text easier to read */
+        color: #333;             /* Dark grey text color */
+        background-color: #fcfcfc; /* Very light grey background */
+        border: 2px solid #ccc;  /* A clean, light grey border */
+        border-radius: 8px;      /* Smooth, rounded corners */
+        box-sizing: border-box;  /* Ensures padding doesn't mess up the width */
+        
+    }
+
+    /* What happens when the user clicks inside to type */
+    .enhanced-input:focus {
+        background-color: #ffffff; /* Turns pure white */
+        border-color: rgb(155, 59, 155); /* Matches your purple navbar */
+        outline: none; /* Removes the ugly default browser outline */
+        box-shadow: 0 0 8px rgba(155, 59, 155, 0.4); /* Adds a soft purple glow */
+    }
+</style>
+
+
+</head>
+<body style="background-color: plum; margin: 0px;">
+
+<nav style="background-color:rgb(155, 59, 155); position: sticky; top:0px; box-shadow: 1px 2px 4px;">
 <div style="position: sticky;">
+    <div style="height: 3px;"></div>
     <h1>EMPLOYEE DETAILS</h1>
     <div style="background-color: purple; padding-left: 3px;"><button style="background-color: rgb(228, 134, 243);">back</button></div>
 </div>
@@ -18,9 +45,27 @@
         <h2>employee register</h2>
         
         <div style="display: inline-block; margin-bottom: 20px; mar">
-        <label>Name <input type="text" placeholder="enter your name"></label>
+        <label>FIRST NAME  <input type="text" placeholder="enter your name" class="enhanced-input"></label>
         </div>
-        
+        <div style="display: inline-block; margin-bottom: 20px; mar">
+        <label>LAST NAME   <input type="text" placeholder="enter your name" class="enhanced-input"></label>
+        </div>
+        <br>
+         <div style="display: inline-block; margin-bottom: 20px; mar">
+        <label>WORK EMAIL  <input type="email" placeholder="enter your email" class="enhanced-input" ></label>
+        </div>
+        <br>
+         <div style="display: inline-block; margin-bottom: 20px; mar">
+        <label>PHONE NUMBER  <input type="text" placeholder="enter your phone no." class="enhanced-input" ></label>
+        </div>
+
     </form>
+
+    <button type="button" class="btn btn-primary btn-lg" >SUBMIT</button>
+<footer style=" margin-top: auto;">
+    <div style="margin-bottom: 0px; bottom: 0px; height: 300px; background-color: rgb(138, 83, 134);">
+        
+    </div>
+</footer>
 </body>
 </html>
