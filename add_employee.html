@@ -6,6 +6,12 @@
     <title>Document</title>
 
 <style>
+    #a{
+        background-color: plum;
+        margin: 0px;
+        align-items: center;
+       
+    }
     /* Styling for the input box */
     .enhanced-input {
         width: 400px;            /* Makes it stretch nicely (or use 300px for fixed width) */
@@ -27,45 +33,71 @@
         outline: none; /* Removes the ugly default browser outline */
         box-shadow: 0 0 8px rgba(155, 59, 155, 0.4); /* Adds a soft purple glow */
     }
+
+    #submit {
+        background-color: rgb(173, 65, 173);
+        color: white;
+        padding: 10px 20px;
+        border: 2px solid rgb(155, 59, 155);
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
 </style>
 
 
 </head>
-<body style="background-color: plum; margin: 0px;">
+<body id="a" >
 
 <nav style="background-color:rgb(155, 59, 155); position: sticky; top:0px; box-shadow: 1px 2px 4px;">
 <div style="position: sticky;">
     <div style="height: 3px;"></div>
     <h1>EMPLOYEE DETAILS</h1>
     <div style="background-color: purple; padding-left: 3px;"><button style="background-color: rgb(228, 134, 243);">back</button></div>
-</div>
-    </nav>
+  </div>
+</nav>
 
-    <form>
+    <form style="text-align: center;">
         <h2>employee register</h2>
+        <br>
         
-        <div style="display: inline-block; margin-bottom: 20px; mar">
-        <label>FIRST NAME  <input type="text" placeholder="enter your name" class="enhanced-input"></label>
-        </div>
-        <div style="display: inline-block; margin-bottom: 20px; mar">
-        <label>LAST NAME   <input type="text" placeholder="enter your name" class="enhanced-input"></label>
-        </div>
-        <br>
-         <div style="display: inline-block; margin-bottom: 20px; mar">
-        <label>WORK EMAIL  <input type="email" placeholder="enter your email" class="enhanced-input" ></label>
-        </div>
-        <br>
-         <div style="display: inline-block; margin-bottom: 20px; mar">
-        <label>PHONE NUMBER  <input type="text" placeholder="enter your phone no." class="enhanced-input" ></label>
-        </div>
+    <div style="display: inline-block; margin-bottom: 20px; mar">
+        <label>FIRST NAME <input id="fn1" type="text" placeholder="enter your name" class="enhanced-input"></label>
+    </div>
+    <br>
+    <div style="display: inline-block; margin-bottom: 20px; mar">
+        <label>LAST NAME <input id="ln1" type="text" placeholder="enter your name" class="enhanced-input"></label>
+    </div>
 
+        <br>
+    <div style="display: inline-block; margin-bottom: 20px; mar">
+        <label>WORK EMAIL <input id="e1" type="email" placeholder="enter your email" class="enhanced-input" ></label>
+    </div>
+
+        <br>
+    <div style="display: inline-block; margin-bottom: 20px; mar">
+        <label>PHONE NUMBER <input id="p1" type="text" placeholder="enter your phone no." class="enhanced-input" ></label>
+    </div>
+    <br>
+    <div style="display: inline-block; margin-bottom: 20px; mar">
+        <label>SALARY <input id="s1" type="number" placeholder="enter salary" class="enhanced-input" ></label>
+    </div>
+<br>
+
+
+
+    <a href="employee_list.html"><button id="submit" >SUBMIT</button></a>
+    
     </form>
-
-    <button type="button" class="btn btn-primary btn-lg" >SUBMIT</button>
-<footer style=" margin-top: auto;">
-    <div style="margin-bottom: 0px; bottom: 0px; height: 300px; background-color: rgb(138, 83, 134);">
+<footer style="height: 200px; background-color: rgb(155, 59, 155);">
+    <div style="margin-bottom:300px;">
         
     </div>
+    
 </footer>
+
+<script src="JavaPRO.js">
+    
+</script>
 </body>
 </html>
