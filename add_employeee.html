@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details Form</title> 
+
+<style>
+    /* ADDED: Global styling to remove default margins and set a modern font */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f9; /* MODIFIED: Changed from solid 'plum' to a softer, professional light grey */
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* ADDED: Ensures the footer always stays at the bottom of the screen */
+    }
+
+    /* ADDED: Extracted all inline styles from your <nav> into a clean CSS class */
+    .navbar {
+        background-color: #5e35b1; /* MODIFIED: Changed to a deeper, more corporate shade of purple */
+        color: white;
+        position: sticky;
+        top: 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        padding: 15px 30px;
+        display: flex; /* ADDED: Flexbox makes aligning the title and button side-by-side effortless */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar h1 {
+        margin: 0;
+        font-size: 22px;
+        letter-spacing: 1px; /* ADDED: Slight spacing makes headings look more premium */
+    }
+
+    /* ADDED: Created a proper style for your 'Back' button */
+    .back-btn {
+        background-color: #7e57c2;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.3s; /* ADDED: Makes hover effects smooth */
+    }
+
+    .back-btn:hover {
+        background-color: #9575cd; /* ADDED: Lights up slightly when hovered */
+    }
+
+    /* ADDED: Created a 'Card' to hold your form. This is standard in modern web design. */
+    .form-container {
+        background-color: white;
+        max-width: 450px; /* Limits how wide the form can get */
+        margin: 50px auto; /* Centers the card horizontally */
+        padding: 40px;
+        border-radius: 10px; /* Soft rounded corners */
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Adds a 3D popping out effect */
+        flex: 1; /* Pushes the footer to the bottom */
+    }
+
+    .form-container h2 {
+        text-align: center;
+        color: #333;
+        margin-top: 0;
+        margin-bottom: 30px;
+        text-transform: uppercase; /* ADDED: Capitalizes the title for a formal look */
+    }
+
+    /* ADDED: Replaced your inline divs with a reusable form-group class */
+    .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    /* ADDED: Styled the labels to sit cleanly above the input boxes */
+    .form-group label {
+        display: block; 
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #555;
+        font-size: 14px;
+    }
+
+    /* Your enhanced-input (kept most of it, tweaked for layout) */
+    .enhanced-input {
+        width: 100%; /* MODIFIED: Changed from 400px to 100% so it perfectly fills the form card */
+        padding: 12px 15px;
+        font-size: 16px;
+        color: #333;
+        background-color: #fcfcfc;
+        border: 2px solid #e0e0e0; /* MODIFIED: Lightened the default border */
+        border-radius: 8px;
+        box-sizing: border-box;
+        transition: all 0.3s ease; /* ADDED: Smooth transition for your purple glow */
+    }
+
+    .enhanced-input:focus {
+        background-color: #ffffff;
+        border-color: #5e35b1; /* MODIFIED: Matched this to the new navbar purple */
+        outline: none;
+        box-shadow: 0 0 8px rgba(94, 53, 177, 0.3);
+    }
+
+    /* Styled the submit button */
+    #submit {
+        background-color: #5e35b1; /* MODIFIED: Matched to navbar */
+        color: white;
+        padding: 14px 20px;
+        border: none; /* REMOVED: Took off the border for a flatter, modern aesthetic */
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        width: 100%; /* ADDED: Made the button span the full width of the form */
+        margin-top: 10px;
+        transition: background 0.3s;
+    }
+
+    #submit:hover {
+        background-color: #4527a0; /* ADDED: Darkens when hovered over */
+    }
+
+    /* ADDED: Cleaned up the footer styles */
+    footer {
+        background-color: #2c2c2c; /* MODIFIED: Changed to a standard dark footer color */
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+    }
+</style>
+
+</head>
+<body>
+
+<nav class="navbar">
+    <h1>EMPLOYEE DETAILS</h1>
+    <button class="back-btn" onclick="history.back()">Back</button>
+</nav>
+
+<div class="form-container">
+    <form>
+        <h2>Employee Register</h2>
+        
+        <div class="form-group">
+            <label for="fn1">FIRST NAME</label>
+            <input id="fn1" type="text" placeholder="Enter first name" class="enhanced-input"> </div>
+        
+        <div class="form-group">
+            <label for="ln1">LAST NAME</label>
+            <input id="ln1" type="text" placeholder="Enter last name" class="enhanced-input"> </div>
+
+        <div class="form-group">
+            <label for="e1">WORK EMAIL</label>
+            <input id="e1" type="email" placeholder="Enter work email" class="enhanced-input">
+        </div>
+
+
+        <div class="form-group">
+            <label for="p1">PHONE NUMBER</label>
+            <input id="p1" type="tel" placeholder="Enter phone number" class="enhanced-input">
+        </div>
+        
+        <div class="form-group">
+            <label for="s1">SALARY</label>
+            <input id="s1" type="number" placeholder="Enter salary amount" class="enhanced-input">
+        </div>
+
+        <button type="button" id="submit">SUBMIT</button>
+        
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2026 Employee Management System</p> 
+</footer>
+
+<script src="JavaPRO.js"></script>
+
+</body>
+</html>
